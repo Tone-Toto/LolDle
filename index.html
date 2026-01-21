@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Premier sprite</title>
+  <style></style>
+</head>
+<body>
+  
+<script>
+// Création du canvas et de son context
+let canvas = document.createElement("canvas")
+let context = canvas.getContext("2d")
+
+// Ajout  du canvas
+document.body.appendChild(canvas)
+
+// Propriété du canvas
+canvas.width = 700
+canvas.height = 500
+canvas.style.width = '700px'
+canvas.style.height = '500px'
+
+
+//Création d'un sprite
+class Sprite {
+    //Constructeur de la classe
+    constructor(image, largeur, hauteur,x,y) {
+        this.image = image
+        this.largeur = largeur
+        this.hauteur = hauteur
+        this.animations = {}
+        this.x = x
+        this.y = y
+        this.direction = ""
+    }
+
+    // Ajouter une direction
+    ajouterAnimation(nom, position) {
+        this.animations[nom] = [position[0],position[1]]
+    }
+
+    // Dessin de l'image
+    dessiner() {
+        let posImage = this.animations[this.direction]
+        let positionX = posImage[1] * this.largeur
+        let positionY = posImage[0] * this.hauteur
+        context.drawImage(this.image, positionX, positionY, this.largeur, this.hauteur, this.x, this.y, this.largeur, this.hauteur)
+    }
+}
+
+
+let image = new Image()
+image.onload = function () {
+  spritePerso1 = new Sprite(image, 64, 64, 0, 0)
+  spritePerso1.ajouterAnimation("haut", [8, 0])
+  spritePerso1.ajouterAnimation("gauche", [9, 0])
+  spritePerso1.ajouterAnimation("bas", [10, 0])
+  spritePerso1.ajouterAnimation("droite", [11, 0])
+  spritePerso1.ajouterAnimation("pause", [10, 0])
+  spritePerso1.direction = "pause"
+  window.requestAnimationFrame(boucleJeu)
+}
+image.src = "https://renardeau.ch/cours/files_uploaded/file14_1736670876.png "
+
+
+
+document.addEventListener("keydown", traiterToucheDescend)
+
+function traiterToucheDescend(e) {
+    switch (e.key) {
+        case "Right":
+        case "ArrowRight":
+            spritePerso1.direction = "droite"
+            break
+        case "Left":
+        case "ArrowLeft":
+            spritePerso1.direction = "gauche"
+            break
+        case "Up":
+        case "ArrowUp":
+            spritePerso1.direction = "haut"
+            break
+        case "Down":
+        case "ArrowDown":
+            spritePerso1.direction = "bas"  
+            break
+        case " ":
+            spritePerso1.direction = "pause"
+            break
+    }
+}
+
+function boucleJeu() {
+    
+    if (spritePerso1.direction == "droite") {
+        spritePerso1.x += 2
+    } else if (spritePerso1.direction == "gauche") {
+        spritePerso1.x -= 2
+    } else if (spritePerso1.direction == "haut") {
+        spritePerso1.y -= 2
+    } else if (spritePerso1.direction == "bas") {
+        spritePerso1.y += 2
+    }
+  
+  context.clearRect(0, 0, canvas.width, canvas.height)
+  spritePerso1.dessiner()
+
+  window.requestAnimationFrame(boucleJeu)
+}
+
+
+</script>
+</body>
+</html>
