@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champion Aléatoire - Loldle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Champion Aléatoire</h1>
+       
+        <button id="randomBtn" onclick="pickRandomChampion()">
+            Générer un champion
+        </button>
+
+        <div id="result" class="result hidden">
+            <h2 id="championName"></h2>
+            <div class="info">
+                <p><strong>Genre:</strong> <span id="gender"></span></p>
+                <p><strong>Position:</strong> <span id="position"></span></p>
+                <p><strong>Espèce:</strong> <span id="species"></span></p>
+                <p><strong>Portée:</strong> <span id="range"></span></p>
+                <p><strong>Région:</strong> <span id="region"></span></p>
+            </div>
+        </div>
+
+        <p id="loading">Chargement des champions...</p>
+        <p id="champCount" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
