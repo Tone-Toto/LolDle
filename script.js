@@ -1,5 +1,5 @@
 let championsData = [];
-
+//Un farfadet est passé par ici
 // Charger les données au démarrage
 async function loadChampions() {
     try {
