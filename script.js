@@ -23,23 +23,28 @@ fetch('./data/champions.json')
 
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
 // puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
-function comparer(){
-    for(q in championADeviner){
-        for (i in championADeviner[q]){
-            if (championEntre[q][i] == championADeviner[q][i]){
-                pointsCommuns ++;
+function comparer() {
+    for (const q in championADeviner) {
+
+        let pointsCommuns = 0;
+
+        //le const,etc. c'est chatgpt
+        for (const valeur of championADeviner[q]) {
+            if (championEntre[q].includes(valeur)) {
+                pointsCommuns++;
             }
         }
-        if (pointsCommuns == championADeviner[q].length){
-            //mettre la couleur du background de la case en vert
+
+        if (pointsCommuns === championADeviner[q].length) {
+            // background case vert
         }
-        else if (0 < pointsCommuns && pointsCommuns < championADeviner[q].length){
-            //mettre la couleur du background de la case en orange
+        else if (pointsCommuns > 0 && pointsCommuns < championADeviner[q].length) {
+            // background case orange
         }
         else {
-            //mettre la couleur du background de la case en rouge
+            // background case rouge
         }
-}
+    }
 }
 
 //utiliser championEntre = prompt("Entrez votre Champion")
