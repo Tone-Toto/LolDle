@@ -1,5 +1,5 @@
 // Charger le fichier JSON
-fetch('champions.json')
+fetch('./data/champions.json')
     .then(response => response.json())  // Convertir la réponse en JSON
     .then(champions => {
         // Récupérer l'élément HTML où on va afficher les noms
