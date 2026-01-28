@@ -1,19 +1,18 @@
+let championADeviner = null;
+
 // Charger le fichier JSON
 fetch('./data/champions.json')
+    // Variable globale pour stocker le champion à deviner
     .then(response => response.json())  // Convertir la réponse en JSON
     .then(champions => {
-        // Récupérer l'élément HTML où on va afficher les noms
-        const championsList = document.getElementById('champions-list');
+        // Choisir un champion aléatoire
+        const indexAleatoire = Math.floor(Math.random() * champions.length);
+        championADeviner = champions[indexAleatoire];
         
-        // Parcourir tous les champions
-        champions.forEach(champion => {
-            // Créer un élément pour chaque champion
-            const championDiv = document.createElement('div');
-            championDiv.textContent = champion.name[0];  // Afficher le nom
-            
-            // Ajouter l'élément à la liste
-            championsList.appendChild(championDiv);
-        });
+        // Pour vérifier que ça marche (à retirer plus tard)
+        console.log('Champion à deviner:', championADeviner.name[0]);
+        
+        // Plus tard, on ajoutera ici le système de devinettes
     })
     .catch(error => {
         console.error('Erreur lors du chargement:', error);
