@@ -18,3 +18,29 @@ fetch('./data/champions.json')
     .catch(error => {
         console.error('Erreur lors du chargement:', error);
     });
+<<<<<<< HEAD
+=======
+
+//fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
+// puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
+function comparer(){
+    for(q in championADeviner){
+        for (i in championADeviner[q]){
+            if (championEntre[q][i] == championADeviner[q][i]){
+                pointsCommuns ++;
+            }
+        }
+        if (pointsCommuns == championADeviner[q].length){
+            //mettre la couleur du background de la case en vert
+        }
+        else if (0 < pointsCommuns && pointsCommuns < championADeviner[q].length){
+            //mettre la couleur du background de la case en orange
+        }
+        else {
+            //mettre la couleur du background de la case en rouge
+        }
+}
+}
+
+//utiliser championEntre = prompt("Entrez votre Champion")
+>>>>>>> parent of 196a5c2 (version corrigée de chatgpt d'un bug)
