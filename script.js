@@ -18,7 +18,6 @@ fetch('./data/champions.json')
     .catch(error => {
         console.error('Erreur lors du chargement:', error);
     });
-<<<<<<< HEAD
 
     
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
@@ -48,5 +47,3 @@ function comparer() {
 }
 
 //utiliser championEntre = prompt("Entrez votre Champion")
-=======
->>>>>>> 2ef76b6245c303d196f57ed6721855660a647e36
