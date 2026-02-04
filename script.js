@@ -18,7 +18,10 @@ fetch('./data/champions.json')
     .catch(error => {
         console.error('Erreur lors du chargement:', error);
     });
-
+function getVal() {
+    const championEntre = document.getElementById("maBarre").value;
+    console.log(championEntre);
+  }
     
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
 // puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
