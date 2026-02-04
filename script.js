@@ -4,12 +4,10 @@ let championEntre = null
 let pointsCommuns = null
 // Charger le fichier JSON
 fetch('./data/champions.json')
-    // Variable globale pour stocker le champion à deviner
     .then(response => response.json())  // Convertir la réponse en JSON
     .then(champions => {
-        // Choisir un champion aléatoire
-        const indexAleatoire = Math.floor(Math.random() * champions.length);
-        championADeviner = champions[indexAleatoire];
+        // Récupérer l'élément HTML où on va afficher les noms
+        const championsList = document.getElementById('champions-list');
         
         // Pour vérifier que ça marche (à retirer plus tard)
         console.log('Champion à deviner:', championADeviner.name[0]);
@@ -20,6 +18,7 @@ fetch('./data/champions.json')
     .catch(error => {
         console.error('Erreur lors du chargement:', error);
     });
+<<<<<<< HEAD
 
     
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
@@ -49,3 +48,5 @@ function comparer() {
 }
 
 //utiliser championEntre = prompt("Entrez votre Champion")
+=======
+>>>>>>> 2ef76b6245c303d196f57ed6721855660a647e36
