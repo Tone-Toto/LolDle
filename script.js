@@ -21,6 +21,7 @@ fetch('./data/champions.json')
         console.error('Erreur lors du chargement:', error);
     });
 
+    
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
 // puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
 function comparer() {
