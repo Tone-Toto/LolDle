@@ -9,6 +9,10 @@ fetch('./data/champions.json')
         // Récupérer l'élément HTML où on va afficher les noms
         const championsList = document.getElementById('champions-list');
         
+        // Sélectionner un champion aléatoirement
+        const randomIndex = Math.floor(Math.random() * champions.length);
+        championADeviner = champions[randomIndex];
+        
         // Pour vérifier que ça marche (à retirer plus tard)
         console.log('Champion à deviner:', championADeviner.name[0]);
         
