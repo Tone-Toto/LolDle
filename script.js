@@ -55,15 +55,15 @@ function comparer() {
 
 function creerBlocs() {
     console.log(championADeviner);
-    for (const q in championADeviner) {
+    let questions = Object.keys(championADeviner);
+    for (const q in questions) {
         let bloc = document.createElement('div');
-        bloc.innerText = championADeviner[q];
+        bloc.innerText = questions[q];
         bloc.style.width = '100px';
         bloc.style.height = '100px';
-        bloc.style.border = '1px solid black';
         bloc.style.display = 'inline-block';
         bloc.style.margin = '5px';
-        bloc.style.backgroundColor = 'red'; // Couleur de fond rouge par défaut
+        bloc.style.backgroundColor = 'white'; // Couleur de fond rouge par défaut
         document.getElementById('container').appendChild(bloc);
     }
 }
