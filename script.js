@@ -29,6 +29,22 @@ function getVal() {
 
 //fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
 // puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
+
+
+//function creerBlocs() {
+   //console.log(championADeviner);
+    //for (const q in championADeviner) {
+        //let bloc = document.createElement('div');
+        //bloc.innerText = championADeviner[q];
+        //bloc.style.width = '100px';
+        //bloc.style.height = '100px';
+        //bloc.style.border = '1px solid black';
+        //bloc.style.display = 'inline-block';
+        //bloc.style.margin = '5px';
+        //bloc.style.backgroundColor = 'red'; // Couleur de fond rouge par défaut
+        //document.getElementById('container').appendChild(bloc);
+    //}
+//}
 function comparer() {
     for (const q in championADeviner) {
 
@@ -42,16 +58,43 @@ function comparer() {
         }
 
         if (pointsCommuns === championADeviner[q].length) {
-            // background case vert
+            let bloc = document.createElement('div');
+            bloc.innerText = championADeviner[q];
+            bloc.style.width = '100px';
+            bloc.style.height = '100px';
+            bloc.style.border = '1px solid black';
+            bloc.style.display = 'inline-block';
+            bloc.style.margin = '5px';
+            bloc.style.backgroundColor = 'green'; // Couleur de fond rouge par défaut
+            document.getElementById('container').appendChild(bloc);
         }
         else if (pointsCommuns > 0 && pointsCommuns < championADeviner[q].length) {
-            // background case orange
+            let bloc = document.createElement('div');
+            bloc.innerText = championADeviner[q];
+            bloc.style.width = '100px';
+            bloc.style.height = '100px';
+            bloc.style.border = '1px solid black';
+            bloc.style.display = 'inline-block';
+            bloc.style.margin = '5px';
+            bloc.style.backgroundColor = 'orange'; // Couleur de fond rouge par défaut
+            document.getElementById('container').appendChild(bloc);
         }
         else {
-            // background case rouge
+            let bloc = document.createElement('div');
+            bloc.innerText = championADeviner[q];
+            bloc.style.width = '100px';
+            bloc.style.height = '100px';
+            bloc.style.border = '1px solid black';
+            bloc.style.display = 'inline-block';
+            bloc.style.margin = '5px';
+            bloc.style.backgroundColor = 'red'; // Couleur de fond rouge par défaut
+            document.getElementById('container').appendChild(bloc);
         }
     }
 }
+
+
+
 
 function creerBlocs() {
     console.log(championADeviner);
