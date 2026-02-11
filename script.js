@@ -70,3 +70,5 @@ function creerBlocs() {
 
 
 //utiliser championEntre = prompt("Entrez votre Champion")
+
+//plus tard, rajouter: losque champion est entré: lancer fonction
