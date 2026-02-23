@@ -72,7 +72,7 @@ function comparer() {
             }
         }
 
-        if (pointsCommuns === championADeviner[q].length) {
+        if (pointsCommuns === championADeviner[q].length && championEntre[q].length === championADeviner[q].length) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
             bloc.style.width = '100px';
