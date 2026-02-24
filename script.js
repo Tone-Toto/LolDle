@@ -72,43 +72,55 @@ function comparer() {
             }
         }
 
-        if (pointsCommuns === championADeviner[q].length && championEntre[q].length === championADeviner[q].length) {
+        if (pointsCommuns == championADeviner[q].length && championEntre[q].length == championADeviner[q].length) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
-            bloc.style.textAlign = 'center';
-            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
-            bloc.style.display = 'inline-block';
             bloc.style.margin = '5px';
-            bloc.style.backgroundColor = 'green'; // Couleur de fond rouge par défaut
+            bloc.style.backgroundColor = 'green';
+            //Claude Pour aligner non seulement horizontalement comme avant mais
+            // aussi verticalement et ceci est facile avec flex
+            bloc.style.verticalAlign = "middle";
+            bloc.style.display = "inline-flex";
+            bloc.style.justifyContent = "center";
+            bloc.style.alignItems = "center";
+            //Fin de Claude
             document.getElementById('container').appendChild(bloc);
         }
         else if (pointsCommuns > 0) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
-            bloc.style.textAlign = 'center';
-            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
-            bloc.style.display = 'inline-block';
             bloc.style.margin = '5px';
-            bloc.style.backgroundColor = 'orange'; // Couleur de fond rouge par défaut
+            bloc.style.backgroundColor = 'orange';
+            //Claude Pour aligner non seulement horizontalement comme avant mais
+            // aussi verticalement et ceci est facile avec flex
+            bloc.style.verticalAlign = "middle";
+            bloc.style.display = "inline-flex";
+            bloc.style.justifyContent = "center";
+            bloc.style.alignItems = "center";
+            //Fin de Claude
             document.getElementById('container').appendChild(bloc);
         }
         else {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
-            bloc.style.textAlign = 'center';
-            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
-            bloc.style.display = 'inline-block';
             bloc.style.margin = '5px';
-            bloc.style.backgroundColor = 'red'; // Couleur de fond rouge par défaut
+            bloc.style.backgroundColor = 'red';
+            //Claude Pour aligner non seulement horizontalement comme avant mais
+            // aussi verticalement et ceci est facile avec flex
+            bloc.style.verticalAlign = "middle";
+            bloc.style.display = "inline-flex";
+            bloc.style.justifyContent = "center";
+            bloc.style.alignItems = "center";
+            //Fin de Claude
             document.getElementById('container').appendChild(bloc);
         }
     }
