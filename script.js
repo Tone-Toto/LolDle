@@ -80,6 +80,7 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'green';
+            //Rajouter du code pour pas que le texte ne déborde sur les côtés
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
@@ -97,6 +98,7 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'orange';
+            //Rajouter du code pour pas que le texte ne déborde sur les côtés
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
@@ -114,6 +116,7 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'red';
+            //Rajouter du code pour pas que le texte ne déborde sur les côtés
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
