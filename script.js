@@ -76,6 +76,7 @@ function comparer() {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
             bloc.style.textAlign = 'center';
+            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
@@ -84,10 +85,11 @@ function comparer() {
             bloc.style.backgroundColor = 'green'; // Couleur de fond rouge par défaut
             document.getElementById('container').appendChild(bloc);
         }
-        else if (pointsCommuns > 0 && pointsCommuns < championADeviner[q].length) {
+        else if (pointsCommuns > 0) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
             bloc.style.textAlign = 'center';
+            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
@@ -100,6 +102,7 @@ function comparer() {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
             bloc.style.textAlign = 'center';
+            bloc.style.verticalAlign = 'top';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
