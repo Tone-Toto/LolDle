@@ -75,6 +75,7 @@ function comparer() {
         if (pointsCommuns === championADeviner[q].length && championEntre[q].length === championADeviner[q].length) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
+            bloc.style.textAlign = 'center';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
@@ -86,6 +87,7 @@ function comparer() {
         else if (pointsCommuns > 0 && pointsCommuns < championADeviner[q].length) {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
+            bloc.style.textAlign = 'center';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
@@ -97,6 +99,7 @@ function comparer() {
         else {
             let bloc = document.createElement('div');
             bloc.innerText = championEntre[q];
+            bloc.style.textAlign = 'center';
             bloc.style.width = '100px';
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
