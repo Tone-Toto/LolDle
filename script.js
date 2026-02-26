@@ -1,3 +1,9 @@
+//Ok maintenant c'est pas mal et le jeu marche.
+//A ameliorer:
+// 1. Meilleure barre de recherche: qui trie progressivement et enter marche
+// 2. Lignes de champions qui se mettent vers le bas au fur et à mesure:
+// (1= 1er champ entré) maintenant: 123456  on veut: 654321
+// 3. 
 //definition de certaines variables:
 let championADeviner = null;
 let championEntre = null
@@ -20,7 +26,7 @@ fetch('./data/champions.json')
         // Pour vérifier que ça marche (à retirer plus tard)
         console.log('Champion à deviner:', championADeviner.name[0]);
 
-        // Plus ta  rd, on ajoutera ici le système de devinettes
+        // Plus tard, on ajoutera ici le système de devinettes
         creerBlocs()
     })
     .catch(error => {
@@ -116,7 +122,8 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'red';
-            //Rajouter du code pour pas que le texte ne déborde sur les côtés
+            //Rajouter du code pour pas que le texte ne déborde pas sur les côtés
+            // (par exemple Aatrox)
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
@@ -139,11 +146,15 @@ function creerBlocs() {
         let bloc = document.createElement('div');
         bloc.innerText = questions[q];
         bloc.style.width = '100px';
-        bloc.style.height = '100px';
-        bloc.style.display = 'inline-block';
-        bloc.style.margin = '5px';
-        bloc.style.backgroundColor = 'white'; // Couleur de fond rouge par défaut
-        document.getElementById('container').appendChild(bloc);
+            bloc.style.height = '100px';
+            bloc.style.border = '1px solid black';
+            bloc.style.margin = '5px';
+            bloc.style.backgroundColor = 'Azure';
+            bloc.style.verticalAlign = "middle";
+            bloc.style.display = "inline-flex";
+            bloc.style.justifyContent = "center";
+            bloc.style.alignItems = "center";
+            document.getElementById('container').appendChild(bloc);
     }
 }
 
