@@ -3,7 +3,16 @@
 // 1. Meilleure barre de recherche: qui trie progressivement et enter marche
 // 2. Lignes de champions qui se mettent vers le bas au fur et à mesure:
 // (1= 1er champ entré) maintenant: 123456  on veut: 654321
-// 3. 
+// 3. Ajouter des effets lorsque l'on gagne/lorsque les cubes apparaissent,...)
+// 3. Idee finale si on a le temps, ajouter un timer, faire ça type speedrun, 
+// avec une moyenne de temps, et d’essais sur 5 parties, + pénalisation de temps
+// pour chaque essai (pas pour le premier)
+// 4. Important: C pas la priorité, je pense qu'on peut faire sans.
+// ça marche juste vrmt pas pour Aatrox mais la plupart des autres c chill
+// peut-être demander au prof mais ne pas se casser le crâne sur cee qui suit:
+// Faire que charactéristiques champions entrent exactement dans boîtes:
+// Ex. Si characteristique_champ.text_length{<-on veut la longueur en px du texte}
+// + ce qu'il y avait deja sur 
 //definition de certaines variables:
 let championADeviner = null;
 let championEntre = null
