@@ -4497,6 +4497,61 @@
     },
     {
         "name": [
+            "T1Toto"
+        ],
+        "gender": [
+            "Male"
+        ],
+        "positions": [
+            "Bottom"
+        ],
+        "species": [
+            "Human",
+            "Magically Altered"
+            
+        ],
+        "resource": [
+            "Inner Power"
+        ],
+        "range_type": [
+            "Melee"
+        ],
+        "regions": [
+            "Demacia"
+        ],
+        "release_year": [
+            "2017"
+        ]
+    },
+    {
+        "name": [
+            "Theskooo"
+        ],
+        "gender": [
+            "Non-Binary"
+        ],
+        "positions": [
+            "Support"
+        ],
+        "species": [
+            "Furry",
+            "Worker"
+        ],
+        "resource": [
+            "CC"
+        ],
+        "range_type": [
+            "Ranged"
+        ],
+        "regions": [
+            "Noxus"
+        ],
+        "release_year": [
+            "2009"
+        ]
+    },
+    {
+        "name": [
             "Rammus"
         ],
         "gender": [

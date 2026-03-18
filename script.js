@@ -61,8 +61,8 @@ function getVal() {
     //}
 //}
 function comparer() {
-    for (const q in championADeviner) {
-
+    for (const q of Object.keys(championADeviner).reverse()) {
+//le .reverse c le poto Claude
         let pointsCommuns = 0;
 
         //le const,etc. c'est chatgpt
