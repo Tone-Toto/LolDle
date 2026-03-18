@@ -4470,6 +4470,33 @@
     },
     {
         "name": [
+            "Adileboss"
+        ],
+        "gender": [
+            "Male"
+        ],
+        "positions": [
+            "Middle"
+        ],
+        "species": [
+            "Human",
+            "Cat"
+        ],
+        "resource": [
+            "Rage"
+        ],
+        "range_type": [
+            "Ranged"
+        ],
+        "regions": [
+            "Bandle City"
+        ],
+        "release_year": [
+            "2011"
+        ]
+    },
+    {
+        "name": [
             "Rammus"
         ],
         "gender": [

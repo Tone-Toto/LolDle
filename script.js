@@ -15,7 +15,7 @@ fetch('./data/champions.json')
 
         // Sélectionner un champion aléatoirement
         const randomIndex = Math.floor(Math.random() * champions.length);
-        championADeviner = champions[randomIndex];
+        championADeviner = champions[randomIndex]; // On prend le champion à deviner à l'envers pour éviter de tomber sur les premiers champions à chaque fois
 
         // Pour vérifier que ça marche (à retirer plus tard)
         console.log('Champion à deviner:', championADeviner.name[0]);
