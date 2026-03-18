@@ -88,7 +88,7 @@ function comparer() {
             bloc.style.justifyContent = "center";
             bloc.style.alignItems = "center";
             //Fin de Claude
-            document.getElementById('container').appendChild(bloc);
+            document.getElementById('container').insertAdjacentElement("afterbegin",bloc);
         }
         else if (pointsCommuns > 0) {
             let bloc = document.createElement('div');
@@ -106,7 +106,7 @@ function comparer() {
             bloc.style.justifyContent = "center";
             bloc.style.alignItems = "center";
             //Fin de Claude
-            document.getElementById('container').appendChild(bloc);
+            document.getElementById('container').insertAdjacentElement("afterbegin",bloc);
         }
         else {
             let bloc = document.createElement('div');
@@ -125,7 +125,7 @@ function comparer() {
             bloc.style.justifyContent = "center";
             bloc.style.alignItems = "center";
             //Fin de Claude
-            document.getElementById('container').appendChild(bloc);
+            document.getElementById('container').insertAdjacentElement("afterbegin",bloc);
         }
     }
 }
@@ -143,12 +143,12 @@ function creerBlocs() {
             bloc.style.height = '100px';
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
-            bloc.style.backgroundColor = 'Azure';
+            bloc.style.backgroundColor = ' #6A1BAB';
             bloc.style.verticalAlign = "middle";
             bloc.style.display = "inline-flex";
             bloc.style.justifyContent = "center";
             bloc.style.alignItems = "center";
-            document.getElementById('container').appendChild(bloc);
+            document.getElementById('container2').appendChild(bloc);
     }
 }
 
