@@ -178,6 +178,8 @@ button:focus {
 body {
   background-color: #1e2328;
   font-family: 'Beaufort for LOL', serif;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
   color: #f0e6d2;
 }
 
