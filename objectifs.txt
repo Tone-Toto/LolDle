@@ -18,3 +18,61 @@ peut-être demander au prof mais ne pas se casser le crâne sur cee qui suit:
 Faire que charactéristiques champions entrent exactement dans boîtes:
 Ex. Si characteristique_champ.text_length{<-on veut la longueur en px du texte}
 + ce qu'il y avait deja sur 
+
+
+
+    {
+        "name": [
+            "T1Toto"
+        ],
+        "gender": [
+            "Male"
+        ],
+        "positions": [
+            "Bottom"
+        ],
+        "species": [
+            "Human",
+            "Magically Altered"
+            
+        ],
+        "resource": [
+            "Inner Power"
+        ],
+        "range_type": [
+            "Melee"
+        ],
+        "regions": [
+            "Demacia"
+        ],
+        "release_year": [
+            "2017"
+        ]
+    },
+    {
+        "name": [
+            "Theskooo"
+        ],
+        "gender": [
+            "Non-Binary"
+        ],
+        "positions": [
+            "Support"
+        ],
+        "species": [
+            "Furry",
+            "Worker"
+        ],
+        "resource": [
+            "CC"
+        ],
+        "range_type": [
+            "Ranged"
+        ],
+        "regions": [
+            "Noxus"
+        ],
+        "release_year": [
+            "2009"
+        ]
+    }

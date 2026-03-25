@@ -3,6 +3,9 @@ let championADeviner = null;
 let championEntre = null
 let pointsCommuns = null
 let champions = []
+let blocs_reussis = 0
+let essais = 0
+let score = 0
 // Charger le fichier JSON
 fetch('./data/champions.json')
     .then(response => response.json())  // Convertir la réponse en JSON
@@ -61,10 +64,10 @@ function getVal() {
     //}
 //}
 function comparer() {
+    essais_reussis = 0
     for (const q of Object.keys(championADeviner).reverse()) {
 //le .reverse c le poto Claude
-        let pointsCommuns = 0;
-
+        pointsCommuns = 0;
         //le const,etc. c'est chatgpt
         for (const valeur of championADeviner[q]) {
             if (championEntre[q].includes(valeur)) {
@@ -89,6 +92,7 @@ function comparer() {
             bloc.style.alignItems = "center";
             //Fin de Claude
             document.getElementById('container').insertAdjacentElement("afterbegin",bloc);
+            essais_reussis ++
         }
         else if (pointsCommuns > 0) {
             let bloc = document.createElement('div');
@@ -128,6 +132,19 @@ function comparer() {
             document.getElementById('container').insertAdjacentElement("afterbegin",bloc);
         }
     }
+    if (essais_reussis < 8){
+    essais ++
+    }
+    if (essais_reussis == 8){
+    essais = 0
+    score ++
+    // Sélectionner un champion aléatoirement
+    const randomIndex = Math.floor(Math.random() * champions.length);
+    championADeviner = champions[randomIndex]; // On prend le champion à deviner à l'envers pour éviter de tomber sur les premiers champions à chaque fois
+
+    }
+    console.log('essais:', essais);
+    console.log('score:', score);
 }
 
 
