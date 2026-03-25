@@ -3,9 +3,12 @@ let championADeviner = null;
 let championEntre = null
 let pointsCommuns = null
 let champions = []
-let blocs_reussis = 0
-let essais = 0
-let score = 0
+let blocs_reussis = null
+let essais = null
+let essais_moyenne
+vect_essais = []
+let score = null
+let compteur_parties = null
 // Charger le fichier JSON
 fetch('./data/champions.json')
     .then(response => response.json())  // Convertir la réponse en JSON
@@ -39,6 +42,8 @@ function getVal() {
         alert("Champion introuvable !");
     }
 }
+
+
 //ancien code:
 //    function getVal() {
 //    var championEntre = document.getElementById("maBarre").value;
@@ -136,15 +141,23 @@ function comparer() {
     essais ++
     }
     if (essais_reussis == 8){
-    essais = 0
-    score ++
+    vect_essais = [essais, vect_essais]
     // Sélectionner un champion aléatoirement
     const randomIndex = Math.floor(Math.random() * champions.length);
     championADeviner = champions[randomIndex]; // On prend le champion à deviner à l'envers pour éviter de tomber sur les premiers champions à chaque fois
-
+    console.log('Champion à deviner:', championADeviner.name[0]);
+    essais = 0
+    compteur_parties ++
+    score ++
     }
     console.log('essais:', essais);
     console.log('score:', score);
+    if (compteur_parties == 10){
+        //la fonction reduce est copiée d'internet: https://coreui.io/answers/how-to-sum-an-array-of-numbers-in-javascript/
+        essais_moyenne = vect_essais.reduce((acc, vect_essais) => acc + vect_essais, 0)/10 //(compteur parties)
+        compteur_parties = 0
+    }
+    console.log('essais_moyenne:', essais_moyenne);
 }
 
 
