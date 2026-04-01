@@ -154,7 +154,7 @@ function comparer() {
     console.log('score:', score);
     if (compteur_parties == 3){
         //la fonction reduce est copiée d'internet: https://coreui.io/answers/how-to-sum-an-array-of-numbers-in-javascript/
-        essais_moyenne = vect_essais.reduce((acc, vect_essais) => acc + vect_essais, 0)/10 //(compteur parties)
+        essais_moyenne = vect_essais.reduce((acc, vect_essais) => acc + vect_essais, 0)/3 //(compteur parties)
         compteur_parties = 0
     }
     console.log('essais_moyenne:', essais_moyenne);
