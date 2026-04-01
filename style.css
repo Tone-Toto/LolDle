@@ -189,7 +189,6 @@ body {
   width: 1000px;
 }
 #container2 {
-  text-size-adjust: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
