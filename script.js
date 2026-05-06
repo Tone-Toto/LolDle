@@ -155,8 +155,11 @@ function comparer() {
 
 console.log('essais:', essais);
 console.log('score:', score);
+document.getElementById('score').textContent("essais: " + essais)
+document.getElementById('score').textContent("score: " + score)
 
 if (compteur_parties == 3){
+    //l'internet
     essais_moyenne = vect_essais.reduce((acc, val) => acc + val, 0) / vect_essais.length
     compteur_parties = 0
 }
