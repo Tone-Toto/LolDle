@@ -7,8 +7,9 @@ let blocs_reussis = null
 let essais = null
 let essais_moyenne
 vect_essais = []
-let score = null
+let score = 0
 let compteur_parties = null
+let calcul_moyenne = 0
 // Charger le fichier JSON
 fetch('./data/champions.json')
     .then(response => response.json())  // Convertir la réponse en JSON
@@ -155,16 +156,18 @@ function comparer() {
 
 console.log('essais:', essais);
 console.log('score:', score);
-document.getElementById('score').textContent("essais: " + essais)
-document.getElementById('score').textContent("score: " + score)
+let message = "essais: " + essais + "&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score: " + score
+document.getElementById('score').innerHTML=message
 
 if (compteur_parties == 3){
     //l'internet
-    essais_moyenne = vect_essais.reduce((acc, val) => acc + val, 0) / vect_essais.length
+    calcul_moyenne = vect_essais.reduce((acc, val) => acc + val, 0) / vect_essais.length
+    essais_moyenne = calcul_moyenne.toFixed(2)
     compteur_parties = 0
 }
-
+message = "essais: " + essais + "&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score: " + score + "&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moyenne d'essais sur 3 parties: " + essais_moyenne
 console.log('essais_moyenne:', essais_moyenne);
+document.getElementById('score').innerHTML=message
 }
 
 

@@ -1,15 +1,12 @@
 /* GENERIC
    ============================= */
-.score{
+#score{
+  font-size: larger;
   position:absolute;
-  top: 10px;
-  right:200px;
+  width: 600px;
+  top: 95px;
+  left:350px;
 }
-
-
-
-
-
 
 button:focus {
   outline: 0;
