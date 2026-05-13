@@ -24,7 +24,7 @@ fetch('./data/champions.json')
         const randomIndex = Math.floor(Math.random() * champions.length);
         championADeviner = champions[randomIndex]; // On prend le champion à deviner à l'envers pour éviter de tomber sur les premiers champions à chaque fois
 
-        // Pour vérifier que ça marche (à retirer plus tard)
+        // Pour vérifier que ça marche
         console.log('Champion à deviner:', championADeviner.name[0]);
 
         // Plus tard, on ajoutera ici le système de devinettes
@@ -45,36 +45,12 @@ function getVal() {
 }
 
 
-//ancien code:
-//    function getVal() {
-//    var championEntre = document.getElementById("maBarre").value;
-//    console.log(championEntre);
-//}
-
-//fonction qui va comparer les caracteristiques du champion entré vs champion à deviner
-// puis qui va retourner vert, orange, rouge en fonction des points communs de ces deux champions
-
-
-//function creerBlocs() {
-   //console.log(championADeviner);
-    //for (const q in championADeviner) {
-        //let bloc = document.createElement('div');
-        //bloc.innerText = championADeviner[q];
-        //bloc.style.width = '100px';
-        //bloc.style.height = '100px';
-        //bloc.style.border = '1px solid black';
-        //bloc.style.display = 'inline-block';
-        //bloc.style.margin = '5px';
-        //bloc.style.backgroundColor = 'red'; // Couleur de fond rouge par défaut
-        //document.getElementById('container').appendChild(bloc);
-    //}
-//}
 function comparer() {
     essais_reussis = 0
     for (const q of Object.keys(championADeviner).reverse()) {
 //le .reverse c le poto Claude
         pointsCommuns = 0;
-        //le const,etc. c'est chatgpt
+        //le const,etc. c'est chatgpt mais la structure pas
         for (const valeur of championADeviner[q]) {
             if (championEntre[q].includes(valeur)) {
                 pointsCommuns++;
@@ -89,7 +65,6 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'green';
-            //Rajouter du code pour pas que le texte ne déborde sur les côtés
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
@@ -108,7 +83,6 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'orange';
-            //Rajouter du code pour pas que le texte ne déborde sur les côtés
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
             bloc.style.verticalAlign = "middle";
@@ -126,7 +100,6 @@ function comparer() {
             bloc.style.border = '1px solid black';
             bloc.style.margin = '5px';
             bloc.style.backgroundColor = 'red';
-            //Rajouter du code pour pas que le texte ne déborde pas sur les côtés
             // (par exemple Aatrox)
             //Claude Pour aligner non seulement horizontalement comme avant mais
             // aussi verticalement et ceci est facile avec flex
@@ -192,7 +165,3 @@ function creerBlocs() {
     }
 }
 
-
-//utiliser championEntre = prompt("Entrez votre Champion")
-
-//plus tard, rajouter: losque champion est entré: lancer fonction
