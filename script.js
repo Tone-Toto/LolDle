@@ -5,7 +5,7 @@ let pointsCommuns = null
 let champions = []
 let blocs_reussis = null
 let essais = null
-let essais_moyenne
+let essais_moyenne = "-"
 vect_essais = []
 let score = 0
 let compteur_parties = null
